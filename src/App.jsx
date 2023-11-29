@@ -1,7 +1,7 @@
 import Navbar from "./component/navbar.jsx";
 import discord from "./image/discord-icon.svg";
 import email from "./image/email-icon.svg";
-import phone from "./image/phone-icon.svg";
+import myphoto from "./image/photo.png";
 import linkedin from "./image/linkedin-icon.svg";
 import github from "./image/github-icon.svg";
 import html5 from "./image/html5.svg";
@@ -22,6 +22,7 @@ import gtjpage from "./image/gtj-srcn.png";
 import tripp from "./image/Tripp-logo.svg";
 import trippw from "./image/Tripp-white.png";
 import travelpage from "./image/travel-company-ss.png";
+import tictactoe from "./image/tictactoe-scrn.png";
 
 import git from "./image/git-icon.svg";
 import python from "./image/python.svg";
@@ -70,12 +71,12 @@ import csharp from "./image/cs.svg";
 function App() {
   return (
     <>
-      <div className="min-w-screen min-h-screen bg-base-300">
+      <div className="min-w-screen min-h-screen bg-base-300 font-serif font-normal">
         {/* NAVBAR */}
         <div className="relative pb-20">
           <div className="navbar bg-base-100 rounded-lg fixed z-20 px-6">
             <div className="navbar-start">
-              <a className="btn btn-ghost normal-case text-xl" href="">
+              <a className="btn btn-ghost normal-case text-2xl" href="">
                 Kritwatchara W.
               </a>
             </div>
@@ -83,7 +84,7 @@ function App() {
               <ul className="menu menu-horizontal px-1">
                 <li>
                   <a href="https://www.linkedin.com/in/kritwatchara-wangkhumphai-b2a57b288/">
-                    Linkedin
+                    LinkedIn
                   </a>
                 </li>
 
@@ -98,7 +99,7 @@ function App() {
               </ul>
               <a
                 href="#contact"
-                className="btn bg-gray-700 hover:bg-gray-400 text-white font-bold"
+                className="btn bg-gray-700 hover:bg-gray-400 text-white font-extrabold"
               >
                 Contact me
               </a>
@@ -110,7 +111,7 @@ function App() {
         {/* section 1 */}
         <div className="hero w-100">
           <div className="hero-content flex-row-reverse text-left">
-            <img src="./src/image/photo.png" className="max-w-sm rounded-lg" />
+            <img src={myphoto} className="max-w-sm rounded-lg" />
             <div className="m-8">
               <h1 className="text-2xl py-4">Hi !</h1>
               <h1 className="text-4xl font-bold">
@@ -152,18 +153,22 @@ function App() {
           </div>
         </div>
         {/* Section 2 | Technical skills */}
-        <div class="Technical skills">
+        <div class="">
           <div className="flex justify-center p-10 space-x-2">
             <h1 className="text-4xl">Technical</h1>
-            <h1 className="text-4xl font-bold">Skills</h1>
+            <h1 className="text-4xl font-extrabold dark:text-gray-200">
+              Skills
+            </h1>
             {/* <h1 className="text-4xl font-bold">stack</h1> */}
           </div>
           <div className="flex flex-col items-center">
             <div className="card bg-base-100 dark:bg-gray-800 shadow-xl">
               <div className="card-body flex-col items-center">
-                <div className="flex justify-center space-x-2">
-                  <h1 className="card-title text-xl font-bold">Front-End</h1>
-                  <p className="text-xl">Developer</p>
+                <div className="flex justify-center space-x-2 pb-2">
+                  <h1 className="card-title text-2xl font-extrabold dark:text-gray-200">
+                    Front-End
+                  </h1>
+                  <p className="text-2xl">Developer</p>
                 </div>
                 <div className="flex flex-row">
                   <img className="m-2" src={html5} width={50} />
@@ -177,11 +182,13 @@ function App() {
               </div>
             </div>
 
-            <div className="card bg-base-100 dark:bg-gray-800 shadow-xl my-6">
+            <div className="card bg-base-100 dark:bg-gray-800 shadow-xl my-8">
               <div className="card-body items-center text-center">
-                <div className="flex justify-center space-x-2">
-                  <h1 className="card-title text-l font-bold">Back-End</h1>
-                  <p className="text-xl">Developer</p>
+                <div className="flex justify-center space-x-2 pb-2">
+                  <h1 className="card-title text-2xl dark:text-gray-200 font-extrabold">
+                    Back-End
+                  </h1>
+                  <p className="text-2xl">Developer</p>
                 </div>
                 <div className="flex flex-row">
                   <img className="m-2" src={nodejs} width={50} />
@@ -193,10 +200,12 @@ function App() {
               </div>
             </div>
 
-            <div className="card w-96 bg-base-100 dark:bg-gray-800 shadow-xl">
+            <div className="card w-96 bg-base-100 dark:bg-gray-800 shadow-xl mb-10">
               <div className="card-body items-center text-center">
-                <div className="flex justify-center space-x-2">
-                  <h1 className="card-title text-l font-bold">Other</h1>
+                <div className="flex justify-center space-x-2 pb-2">
+                  <h1 className="card-title text-2xl font-extrabold dark:text-gray-200">
+                    Other
+                  </h1>
                   {/* <p className="text-xl">Designer</p> */}
                 </div>
                 <div className="flex flex-row">
@@ -211,23 +220,27 @@ function App() {
         </div>
 
         {/* Section 3 | My portfolio */}
-        <div className="additional passions">
-          <div className="flex justify-center pt-20 pb-10 space-x-2">
+        <div className="">
+          <div className="flex justify-center py-10 pt-10 space-x-2">
             <h1 className="text-4xl">My</h1>
-            <h1 className="text-4xl font-bold">Portfolio</h1>
+            <h1 className="text-4xl font-extrabold dark:text-gray-200">
+              Portfolio
+            </h1>
           </div>
-
-          <div className="flex space-x-4 justify-center">
+          <div className="flex space-x-8 justify-center max-lg:flex-col max-lg:items-center max-lg:space-x-0">
             {/* Get That Job */}
             {/* <div className="card w-100 bg-base-100 shadow-xl bg-[url('Ellipse-1.png')] bg-no-repeat bg-[left_1rem_top_1rem]"> */}
             <div className="card w-100 bg-base-100 dark:bg-gray-800 shadow-xl">
               <div className="flex flex-row items-center space-x-4 mt-6 ml-10">
                 <img src={gtjlogo} />
-                {/* <p className="text-xl text-indigo-600">Get That Job</p> */}
+                <img src={react} width={30} />
+                <img src={nodejs} width={30} />
+                <img src={tailwindcss} width={30} />
+                <img src={supabase} width={30} />
               </div>
               <figure className="m-6 hover:ring-4 hover:ring-blue-500 shadow-lg rounded-xl">
                 {/* rotate-[-3deg] */}
-                <a href="https://github.com/JumbKWC/Get-That-Job">
+                <a href="https://clone-get-that-job-2-j3-k-frontend.vercel.app">
                   <img src={gtjpage} width={350} alt="Get That Job" />
                 </a>
               </figure>
@@ -235,10 +248,12 @@ function App() {
 
             {/* Travel Company */}
             {/* <div className="card w-100 bg-base-100 dark:bg-gray-800 shadow-xl bg-[url('Ellipse-2.png')] bg-no-repeat bg-[left_1rem_top_1rem]"> */}
-            <div className="card w-100 bg-base-100 dark:bg-gray-800 shadow-xl">
+            <div className="card w-100 bg-base-100 dark:bg-gray-800 shadow-xl max-lg:my-6">
               <div className="flex flex-row items-center space-x-4 mt-6 ml-6">
                 <img className="flex dark:hidden ml-4" src={tripp} />
                 <img className="hidden dark:flex" src={trippw} />
+                <img src={html5} width={30} />
+                <img src={css3} width={30} />
               </div>
               <figure className="m-6 hover:ring-4 hover:ring-blue-500 shadow-lg rounded-xl">
                 <a href="https://github.com/JumbKWC/CSS-miniproject">
@@ -247,15 +262,20 @@ function App() {
               </figure>
             </div>
 
-            {/* Thrid Project */}
-            {/* <div className="card w-100 bg-base-100 shadow-xl bg-[url('Ellipse-3.png')] bg-no-repeat bg-[left_1rem_top_1rem]">
-              <div className="scale-50%">
-                <img src="Logo3.png" />
+            {/* Tic Tac Toe */}
+            <div className="card w-100 bg-base-100 dark:bg-gray-800 shadow-xl">
+              <div className="flex flex-row items-center space-x-4 mt-6 ml-6">
+                <h1 className="text-4xl font-sans font">Tic Tac Toe</h1>
+                <img src={html5} width={30} />
+                <img src={css3} width={30} />
+                <img src={js} width={30} />
               </div>
-              <figure className="pt-10">
-                <img src="image3.png" alt="UX/UI" className="rounded-xl" />
+              <figure className="m-6 hover:ring-4 hover:ring-blue-500 shadow-lg rounded-xl">
+                <a href="https://tictactoe-kwc.netlify.app">
+                  <img src={tictactoe} alt="TicTacToe" width={350} />
+                </a>
               </figure>
-            </div> */}
+            </div>
           </div>
         </div>
 
@@ -263,7 +283,7 @@ function App() {
         <footer className="footer footer-center w-100 p-20" id="contact">
           <div className="flex justify-center space-x-1">
             <h1 className="text-4xl">Contact</h1>
-            <h1 className="text-4xl font-bold">Me</h1>
+            <h1 className="text-4xl font-extrabold dark:text-gray-200">Me</h1>
           </div>
           <div className="flex space-x-4">
             <a
